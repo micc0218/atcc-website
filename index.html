@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>【限時領取】你已獲得 LINE 會員現金紅包！</title>
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="【限時領取】你已獲得 LINE 會員現金紅包！">
+  <meta property="og:description" content="體驗防詐心理測驗，了解你的防詐防詐能力！">
+  <meta property="og:url" content="https://b7b7d617-cede-4a85-9f63-c8e6374b47e7-00-35c7umbw96ars.pike.replit.dev/">
+  <meta property="og:type" content="website">
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 30px;
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    h1 {
+      font-size: 24px;
+      color: #e74c3c;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #00c300;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px;
+    }
+    button:hover {
+      background-color: #009900;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <script>
+    // 當用戶點選「我要領獎!」
+    function chooseReward() {
+      // 隱藏偽中獎與按鈕區
+      document.getElementById('winningSection').classList.add('hidden');
+      document.getElementById('choiceButtons').classList.add('hidden');
+      // 顯示結果訊息
+      document.getElementById('resultSection').classList.remove('hidden');
+      document.getElementById('resultTitle').innerText = "你被騙了！";
+      document.getElementById('resultText').innerText = "這是詐騙連結!以下防詐心理測驗，讓你了解自己的防詐能力";
+      document.getElementById('finalMessage').classList.remove('hidden');
+      // 3秒後自動跳轉到心理測驗頁面
+      setTimeout(function() {
+        window.location.href = 'https://ooopenlab.cc/quiz/LKhSAHvxW0c7feArX2U7';
+      }, 3000);
+    }
+
+    // 當用戶點選「痛失機會!」
+    function chooseMiss() {
+      // 隱藏偽中獎與按鈕區
+      document.getElementById('winningSection').classList.add('hidden');
+      document.getElementById('choiceButtons').classList.add('hidden');
+      // 顯示結果訊息
+      document.getElementById('resultSection').classList.remove('hidden');
+      document.getElementById('resultTitle').innerText = "你很聰明喔!!!";
+      document.getElementById('resultText').innerText = "請不要過度自信!你差點被騙了!!";
+      document.getElementById('finalMessage').classList.remove('hidden');
+      // 3秒後自動跳轉到心理測驗頁面
+      setTimeout(function() {
+        window.location.href = 'https://ooopenlab.cc/quiz/LKhSAHvxW0c7feArX2U7';
+      }, 3000);
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <!-- 偽裝中獎頁面 -->
+    <div id="winningSection">
+      <h1>【限時領取】你已獲得 LINE 會員現金紅包！</h1>
+      <p>請在30秒內點擊下方按鈕領取紅包！</p>
+    </div>
+
+    <!-- 按鈕選擇區 -->
+    <div id="choiceButtons">
+      <button onclick="chooseReward()">我要領獎!</button>
+      <button onclick="chooseMiss()">痛失機會!</button>
+    </div>
+
+    <!-- 結果區，初始隱藏 -->
+    <div id="resultSection" class="hidden">
+      <h1 id="resultTitle"></h1>
+      <p id="resultText"></p>
+    </div>
+
+    <!-- 提示訊息，位於按鈕下方 -->
+    <p id="finalMessage" class="hidden" style="font-size:16px; color:#555; margin-top:20px;">
+      完成心理測驗後，你將有機會獲得抽獎資格，並分享測驗結果給好友！
+    </p>
+  </div>
+</body>
+</html>
